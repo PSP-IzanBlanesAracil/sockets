@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 public class TCPEchoServer {
     public static void main(String[] args) throws IOException {
+
         int port = 6789; // Puerto en el que el servidor escuchará
+
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Servidor iniciado y escuchando en el puerto " + port);
 
@@ -26,7 +28,7 @@ public class TCPEchoServer {
                     String clientSentence = inFromClient.nextLine();
 
                     // Procesa el mensaje y responde
-                    String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase(Locale.ROOT) + System.lineSeparator();
+                    String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase() + System.lineSeparator();
 
                     outToClient.println(capitalizedSentence);
 
