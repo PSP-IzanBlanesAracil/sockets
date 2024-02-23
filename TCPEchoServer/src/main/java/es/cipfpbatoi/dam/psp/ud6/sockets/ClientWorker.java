@@ -8,9 +8,10 @@ import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ClientWorker implements Runnable{
+public class ClientWorker implements Runnable {
 
     Socket socket;
+
     public ClientWorker(Socket socket) {
         this.socket = socket;
     }
@@ -20,36 +21,39 @@ public class ClientWorker implements Runnable{
         //Ejecutar varios sockets, hacer lo mismo que en la clase TCPEchoServer
         int port = 6789; // Puerto en el que el servidor escuchará
 
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
-            System.out.println("Servidor iniciado y escuchando en el puerto " + port);
+//        try (ServerSocket serverSocket = new ServerSocket(port)) {
+//            System.out.println("Servidor iniciado y escuchando en el puerto " + port);
+//
+//            // El servidor se queda en un bucle infinito esperando por conexiones de clientes
+//            while (true) {
 
-            // El servidor se queda en un bucle infinito esperando por conexiones de clientes
-            while (true) {
+        try (// Espera una conexión de un cliente
 
-                try (// Espera una conexión de un cliente
-                     Socket connectionSocket = serverSocket.accept();
-                     // Crea flujos de entrada y salida para leer y escribir datos hacia/desde el cliente
-                     Scanner inFromClient = new Scanner(connectionSocket.getInputStream());
-                     PrintWriter outToClient = new PrintWriter(connectionSocket.getOutputStream(),true)){
+             // Crea flujos de entrada y salida para leer y escribir datos hacia/desde el cliente
+             Scanner inFromClient = new Scanner(socket.getInputStream());
+             PrintWriter outToClient = new PrintWriter(socket.getOutputStream(), true)) {
 
 
-                    // Recibe el mensaje del cliente
-                    String clientSentence = inFromClient.nextLine();
+            // Recibe el mensaje del cliente
+            String clientSentence = inFromClient.nextLine();
 
-                    // Procesa el mensaje y responde
-                    String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase() + System.lineSeparator();
+            // Procesa el mensaje y responde
+            String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase() + System.lineSeparator();
 
-                    outToClient.println(capitalizedSentence);
+            outToClient.println(capitalizedSentence);
 
-                } catch (IOException e){
-                    System.err.println(e.getLocalizedMessage());
-                }
-
-            }
+//                } catch (IOException e){
+//                    System.err.println(e.getLocalizedMessage());
+//                }
+//
+//            }
+//        } catch (IOException e) {
+//            System.err.println(e.getLocalizedMessage());
+//        }
         } catch (IOException e) {
-            System.err.println(e.getLocalizedMessage());
+            throw new RuntimeException(e);
         }
-    }
 //        socket.close();
     }
+}
 
