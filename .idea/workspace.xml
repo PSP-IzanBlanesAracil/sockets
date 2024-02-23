@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="" />
+    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -48,8 +54,8 @@
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.UDPEchoClient">
-    <configuration name="TCPEchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TCPEchoServer">
+    <configuration name="TCPEchoClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.cipfpbatoi.dam.psp.ud6.sockets.TCPEchoClient" />
       <module name="TCPEchoServer" />
       <extension name="coverage">
@@ -103,17 +109,17 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPEchoServer" />
+        <item itemvalue="Application.TCPEchoClient" />
         <item itemvalue="Application.UDPEchoClient" />
         <item itemvalue="Application.UDPEchoServer" />
-        <item itemvalue="Application.TCPEchoClient" />
-        <item itemvalue="Application.TCPEchoServer" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-8336523bb0d9-301ddabe" />
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
       </set>
     </attachedChunks>
   </component>

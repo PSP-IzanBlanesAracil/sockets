@@ -1,14 +1,23 @@
 package es.cipfpbatoi.dam.psp.ud6.sockets;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Locale;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class TCPEchoServer {
-    public static void main(String[] args) throws IOException {
+public class ClientWorker implements Runnable{
 
+    Socket socket;
+    public ClientWorker(Socket socket) {
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+        //Ejecutar varios sockets, hacer lo mismo que en la clase TCPEchoServer
         int port = 6789; // Puerto en el que el servidor escuchará
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -27,10 +36,6 @@ public class TCPEchoServer {
                     // Recibe el mensaje del cliente
                     String clientSentence = inFromClient.nextLine();
 
-                    ClientWorker clientWorker = new ClientWorker(connectionSocket);
-                    Thread t = new Thread(clientWorker);
-                    t.start();
-
                     // Procesa el mensaje y responde
                     String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase() + System.lineSeparator();
 
@@ -45,4 +50,6 @@ public class TCPEchoServer {
             System.err.println(e.getLocalizedMessage());
         }
     }
-}
+//        socket.close();
+    }
+
