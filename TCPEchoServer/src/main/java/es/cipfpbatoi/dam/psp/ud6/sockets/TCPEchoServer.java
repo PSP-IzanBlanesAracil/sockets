@@ -20,9 +20,11 @@ public class TCPEchoServer {
 
             while (true) {
                 Socket connectionSocket = serverSocket.accept();
+
                 // Crea flujos de entrada y salida para leer y escribir datos hacia/desde el cliente
                 Scanner inFromClient = new Scanner(connectionSocket.getInputStream());
                 String clientName = inFromClient.nextLine();
+
 //                    PrintWriter outToClient = new PrintWriter(connectionSocket.getOutputStream(), true);
                 ClientWorker clientWorker = new ClientWorker(connectionSocket, clientName, clientes);
                 Thread t = new Thread(clientWorker);
@@ -35,12 +37,6 @@ public class TCPEchoServer {
                         cliente.outToClient.println(clientWorker.getNombreCliente() + " se ha unido al chat");
                     }
                 }
-
-                // Procesa el mensaje y responde
-//                        String capitalizedSentence = "El servidor ha recibido: " + clientSentence.toUpperCase() + System.lineSeparator();
-
-//                        outToClient.println(capitalizedSentence);
-
             }
         } catch (IOException e) {
             System.err.println(e.getLocalizedMessage());
