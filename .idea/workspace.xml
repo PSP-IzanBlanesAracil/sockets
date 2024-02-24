@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="Modificado la clase TCPEchoServer">
+    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="Modificado la clase ClientWorker">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "IzanBlanesAracil"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IzanBlanesAracil&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -185,50 +187,61 @@
       <option name="project" value="LOCAL" />
       <updated>1708778753152</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modificado la clase ClientWorker">
+      <option name="closed" value="true" />
+      <created>1708779037508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708779037508</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modificado la clase ClientWorker">
+      <option name="closed" value="true" />
+      <created>1708780019082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708780019082</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Modificado la clase TCPEchoServer y ClientWorker" />
-    <MESSAGE value="Modificado la clase ClientWorker" />
     <MESSAGE value="Modificado la clase TCPEchoServer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificado la clase TCPEchoServer" />
+    <MESSAGE value="Modificado la clase ClientWorker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificado la clase ClientWorker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="15" />
+          <line>38</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="16" />
+          <line>61</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="17" />
+          <line>55</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="clientWorkers.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

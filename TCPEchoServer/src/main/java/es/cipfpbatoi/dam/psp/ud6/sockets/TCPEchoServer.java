@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class TCPEchoServer {
     public static void main(String[] args) throws IOException {
-
+        ArrayList<String> nombreClientes = new ArrayList<>();
         int port = 6789; // Puerto en el que el servidor escuchará
         int totalNucleos = Runtime.getRuntime().availableProcessors();
         ThreadPoolExecutor poolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(totalNucleos);
@@ -23,17 +23,25 @@ public class TCPEchoServer {
 
                 // Crea flujos de entrada y salida para leer y escribir datos hacia/desde el cliente
                 Scanner inFromClient = new Scanner(connectionSocket.getInputStream());
-                String clientName = inFromClient.nextLine();
+                String nombreCliente = inFromClient.nextLine().trim();
 
 //                    PrintWriter outToClient = new PrintWriter(connectionSocket.getOutputStream(), true);
-                ClientWorker clientWorker = new ClientWorker(connectionSocket, clientName, clientes);
+                ClientWorker clientWorker;
+                if(nombreClientes.contains(nombreCliente)){
+                    clientWorker= new ClientWorker(connectionSocket, nombreCliente, clientes, true);
+                }else {
+                    clientWorker = new ClientWorker(connectionSocket, nombreCliente, clientes, false);
+                    nombreClientes.add(nombreCliente);
+                }
+
+
                 Thread t = new Thread(clientWorker);
                 t.start();
                 clientes.add(clientWorker);
                 poolExecutor.getQueue().add(clientWorker);
 
                 for (ClientWorker cliente : clientes) {
-                    if (!cliente.getNombreCliente().equalsIgnoreCase(clientName)) {
+                    if (!cliente.getNombreCliente().equalsIgnoreCase(nombreCliente)) {
                         cliente.outToClient.println(clientWorker.getNombreCliente() + " se ha unido al chat");
                     }
                 }
