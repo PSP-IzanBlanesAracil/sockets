@@ -45,8 +45,9 @@ public class ClientWorker implements Runnable {
             }
         }
         for (ClientWorker cliente : clientWorkers) {
-            if (!cliente.getNombreCliente().equalsIgnoreCase(this.nombreCliente))
-                cliente.outToClient.println(this.nombreCliente+ " a abandonado el chat");
+            if (!cliente.getNombreCliente().equalsIgnoreCase(this.nombreCliente)) {
+                cliente.outToClient.println(this.nombreCliente + " a abandonado el chat");
+            }
         }
         try {
             socket.close();
