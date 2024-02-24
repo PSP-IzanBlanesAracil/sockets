@@ -10,10 +10,11 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class TCPEchoServer {
     public static void main(String[] args) throws IOException {
-        mostrarEjecucionServer();
+        TCPEchoServer tcpEchoServer = new TCPEchoServer();
+        tcpEchoServer.mostrarEjecucionServer();
     }
 
-    private static void mostrarEjecucionServer() {
+    private void mostrarEjecucionServer() {
         ArrayList<String> nombreClientes = new ArrayList<>();
         int port = 6789; // Puerto en el que el servidor escuchará
         int totalNucleos = Runtime.getRuntime().availableProcessors();
