@@ -14,16 +14,16 @@ public class ClientWorker implements Runnable {
     private static final String PALABRA_FINALIZAR_COMUNICACION = "bye";
     ArrayList<ClientWorker> clientWorkers;
     PrintWriter outToClient;
-    static ConcurrentHashMap<String, String> listaMensajes= new ConcurrentHashMap<>();
+    static ConcurrentHashMap<String, String> listaMensajes = new ConcurrentHashMap<>();
     boolean tieneMensajesPendientes;
 
-    int numeroMensaje =0;
+    int numeroMensaje = 0;
 
     public ClientWorker(Socket socket, String nombreCliente, ArrayList<ClientWorker> clientWorkers, boolean tieneMensajesPendientes) {
         this.socket = socket;
         this.nombreCliente = nombreCliente;
         this.clientWorkers = clientWorkers;
-        this.tieneMensajesPendientes=tieneMensajesPendientes;
+        this.tieneMensajesPendientes = tieneMensajesPendientes;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class ClientWorker implements Runnable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        outToClient.println("Bienvenido "+nombreCliente.toUpperCase()+"  al chat, hay "+clientWorkers.size() +" usuarios conectados");
-        if(tieneMensajesPendientes){
-            for (String keyMensaje: listaMensajes.keySet()){
+        outToClient.println("Bienvenido " + nombreCliente.toUpperCase() + "  al chat, hay " + clientWorkers.size() + " usuarios conectados");
+        if (tieneMensajesPendientes) {
+            for (String keyMensaje : listaMensajes.keySet()) {
 //                keyMensaje.concat("\n");
-                if(!keyMensaje.equalsIgnoreCase(this.nombreCliente)){
+                if (!keyMensaje.equalsIgnoreCase(this.nombreCliente)) {
                     outToClient.println(listaMensajes.get(keyMensaje));
                 }
             }
