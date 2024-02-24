@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="Modificado la clase ClientWorker">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/ClientWorker.java" afterDir="false" />
+    <list default="true" id="e1d77984-dd46-4ba2-8096-b909d2ab8f5c" name="Changes" comment="Modificado la clase TCPEchoServer refactorizándolo al método mostrarEjecucionServer">
       <change beforePath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TCPEchoServer/src/main/java/es/cipfpbatoi/dam/psp/ud6/sockets/TCPEchoServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +201,31 @@
       <option name="project" value="LOCAL" />
       <updated>1708780019082</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modificado la clase ClientWorker y TCPEchoServer">
+      <option name="closed" value="true" />
+      <created>1708804962013</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708804962013</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modificado la clase TCPEchoServer refactorizándolo al método mostrarEjecucionServer">
+      <option name="closed" value="true" />
+      <created>1708805036659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708805036659</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modificado la clase TCPEchoServer refactorizándolo al método mostrarEjecucionServer">
+      <option name="closed" value="true" />
+      <created>1708805133517</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708805133517</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,7 +233,9 @@
     <MESSAGE value="Modificado la clase TCPEchoServer y ClientWorker" />
     <MESSAGE value="Modificado la clase TCPEchoServer" />
     <MESSAGE value="Modificado la clase ClientWorker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificado la clase ClientWorker" />
+    <MESSAGE value="Modificado la clase ClientWorker y TCPEchoServer" />
+    <MESSAGE value="Modificado la clase TCPEchoServer refactorizándolo al método mostrarEjecucionServer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificado la clase TCPEchoServer refactorizándolo al método mostrarEjecucionServer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

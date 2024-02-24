@@ -38,7 +38,6 @@ public class ClientWorker implements Runnable {
         if(tieneMensajesPendientes){
             for (String keyMensaje: listaMensajes.keySet()){
 //                keyMensaje.concat("\n");
-
                 if(!keyMensaje.equalsIgnoreCase(this.nombreCliente)){
                     outToClient.println(listaMensajes.get(keyMensaje));
                 }
