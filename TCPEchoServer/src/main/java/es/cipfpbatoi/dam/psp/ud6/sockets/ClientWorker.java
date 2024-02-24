@@ -44,17 +44,21 @@ public class ClientWorker implements Runnable {
                 System.err.println(e.getLocalizedMessage());
             }
         }
-        for (ClientWorker cliente : clientWorkers) {
-            if (!cliente.getNombreCliente().equalsIgnoreCase(this.nombreCliente)) {
-                cliente.outToClient.println(this.nombreCliente + " a abandonado el chat");
-            }
-        }
+        mostrarClientesAbandonados();
         try {
             socket.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+    }
+
+    private void mostrarClientesAbandonados() {
+        for (ClientWorker cliente : clientWorkers) {
+            if (!cliente.getNombreCliente().equalsIgnoreCase(this.nombreCliente)) {
+                cliente.outToClient.println(this.nombreCliente + " a abandonado el chat");
+            }
+        }
     }
 
     public String getNombreCliente() {
