@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -37,7 +36,6 @@ public class ClientWorker implements Runnable {
         outToClient.println("Bienvenido " + nombreCliente.toUpperCase() + "  al chat, hay " + clientWorkers.size() + " usuarios conectados");
         if (tieneMensajesPendientes) {
             for (String keyMensaje : listaMensajes.keySet()) {
-//                keyMensaje.concat("\n");
                 if (!keyMensaje.equalsIgnoreCase(this.nombreCliente)) {
                     outToClient.println(listaMensajes.get(keyMensaje));
                 }
@@ -57,11 +55,9 @@ public class ClientWorker implements Runnable {
                 for (ClientWorker cliente : clientWorkers) {
                     if (!cliente.getNombreCliente().equalsIgnoreCase(this.nombreCliente)) {
                         listaMensajes.put(this.nombreCliente, fraseFinal);
-//                        listaMensajes.put(this.nombreCliente+"|"+numeroMensaje, fraseFinal);
                         cliente.outToClient.println(fraseFinal);
                     }
                 }
-//                outToClient.println(fraseFinal);
 
             } catch (IOException e) {
                 System.err.println(e.getLocalizedMessage());
@@ -88,4 +84,3 @@ public class ClientWorker implements Runnable {
         return nombreCliente;
     }
 }
-
