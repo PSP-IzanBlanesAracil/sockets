@@ -30,9 +30,7 @@ public class TCPEchoServer {
                 String nombreCliente = inFromClient.nextLine().trim();
 
                 ClientWorker clientWorker = obtenerCliente(nombreClientes, nombreCliente, connectionSocket, clientes);
-
-                ejecutarHoloClienteWolker(clientWorker, clientes, poolExecutor);
-
+                ejecutarClienteWolker(clientWorker, clientes, poolExecutor);
                 obtenerClienteConectado(clientes, nombreCliente, clientWorker);
             }
         } catch (IOException e) {
@@ -48,7 +46,7 @@ public class TCPEchoServer {
         }
     }
 
-    private static void ejecutarHoloClienteWolker(ClientWorker clientWorker, ArrayList<ClientWorker> clientes, ThreadPoolExecutor poolExecutor) {
+    private static void ejecutarClienteWolker(ClientWorker clientWorker, ArrayList<ClientWorker> clientes, ThreadPoolExecutor poolExecutor) {
         Thread t = new Thread(clientWorker);
         t.start();
         clientes.add(clientWorker);
